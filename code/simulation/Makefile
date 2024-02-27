@@ -1,20 +1,19 @@
 #
 # Authors:     MG
-# Maintainers: MG
+# Maintainers: MG, HG
 # =========================================
 # GRDM/code/method-types/Makefile
 
 .PHONY: all clean
 
-all: output/graphs-done.touch
+all: output/grdm-section-3-figure.png
 
 clean:
 	-rm output/*
 
-output/graphs-done.touch: \
-		src/graph-methods.R
+output/grdm-section-3-figure.png: \
+		src/simulation.R
 	-mkdir output
 	Rscript --vanilla $<
-	touch $@
 
 # done.
