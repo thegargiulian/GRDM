@@ -1,5 +1,5 @@
 #
-# Authors:     MG
+# Authors:     MG, HG
 # Maintainers: MG
 # =========================================
 # GRDM/code/method-types/src/graph-methods.R
@@ -201,6 +201,10 @@ graph_method7 <- function(r = 0.03) {
                      linetype = "dashed",
                      linewidth = 1) +
         geom_point(aes(x = 0, y = 10),
+                   size = 3) +
+        geom_point(aes(x = 7, y = 8),
+                   size = 3) +
+        geom_point(aes(x = 14, y = 6),
                    size = 3) +
         geom_point(aes(x = 21, y = 4),
                    size = 3) +
