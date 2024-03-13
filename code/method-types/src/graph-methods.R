@@ -38,7 +38,9 @@ graph_method1 <- function() {
                    size = 3) +
         geom_point(aes(x = 50, y = 25),
                    size = 3) +
-        theme_void()
+        theme_void() +
+        labs(caption = "P = X – Y") +
+        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
 
@@ -65,7 +67,11 @@ graph_method2 <- function(r = 0.025) {
                    size = 3) +
         geom_point(aes(x = 20, y = segment2$pop[segment2$time == 20]),
                    size = 3) +
-        theme_void()
+        theme_void() +
+        labs(caption = expression(K[1]*" = X × "*R[F]^{T[D]*" – "*T[X]}*",  "*
+                                  K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D]}*",  "*
+                                  "P = X – Y")) +
+        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
 
@@ -87,7 +93,10 @@ graph_method3 <- function(r = 0.03) {
                    size = 3) +
         geom_point(aes(x = 20, y = 23),
                    size = 3) +
-        theme_void()
+        theme_void() +
+        labs(caption = expression(K[1]*" = X × "*R[F]^{T[Y]*" – "*T[X]}*",  "*
+                                  "P = "*K[1]*" – Y")) +
+        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
 
@@ -115,7 +124,11 @@ graph_method4 <- function(r = 0.03) {
                    size = 3) +
         geom_point(aes(x = 20, y = segment2$pop[segment2$time == 20]),
                    size = 3) +
-        theme_void()
+        theme_void() +
+        labs(caption = expression(K[1]*" = X × "*R[F]^{T[D1]*" – "*T[X]}*",  "*
+                                  K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D2]}*",  "*
+                                  "P = X – Y")) +
+        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
 
@@ -138,7 +151,10 @@ graph_method5 <- function(r = 0.03) {
                    size = 3) +
         geom_point(aes(x = 20, y = 20),
                    size = 3) +
-        theme_void()
+        theme_void()+
+        labs(caption = expression(K[1]*" = X × "*R[F]^{T[D1]*" – "*T[X]}*",  "*
+                                  "P = "*K[1]*" – Y")) +
+        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
 
@@ -159,7 +175,10 @@ graph_method6 <- function(r = 0.03) {
                    size = 3) +
         geom_point(aes(x = 20, y = segment2$pop[segment2$time == 20]),
                    size = 3) +
-        theme_void()
+        theme_void() +
+        labs(caption = expression(K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D]}*",  "*
+                                  "P = X - "*K[2])) +
+        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
 
@@ -208,7 +227,10 @@ graph_method7 <- function(r = 0.03) {
                    size = 3) +
         geom_point(aes(x = 21, y = 4),
                    size = 3) +
-        theme_void()
+        theme_void()+
+        labs(caption = expression(P[i]*" = "*X[i-1]*" × "*R["[i-1, i]"]*" - "*X[i]*",  "*
+                                  "P = Σ"*P[i])) +
+        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
 
