@@ -70,7 +70,7 @@ graph_method2 <- function(r = 0.025) {
         theme_void() +
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[D]*" – "*T[X]}*",  "*
                                   K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D]}*",  "*
-                                  "P = X – Y")) +
+                                  "P = "*K[1]*" – "*K[2])) +
         theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
@@ -127,7 +127,7 @@ graph_method4 <- function(r = 0.03) {
         theme_void() +
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[D1]*" – "*T[X]}*",  "*
                                   K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D2]}*",  "*
-                                  "P = X – Y")) +
+                                  "P = "*K[1]*" – "*K[2])) +
         theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
@@ -177,7 +177,7 @@ graph_method6 <- function(r = 0.03) {
                    size = 3) +
         theme_void() +
         labs(caption = expression(K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D]}*",  "*
-                                  "P = X - "*K[2])) +
+                                  "P = X – "*K[2])) +
         theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
 }
@@ -228,7 +228,7 @@ graph_method7 <- function(r = 0.03) {
         geom_point(aes(x = 21, y = 4),
                    size = 3) +
         theme_void()+
-        labs(caption = expression(P[i]*" = "*X[i-1]*" × "*R["[i-1, i]"]*" - "*X[i]*",  "*
+        labs(caption = expression(P[i]*" = "*X[i-1]*" × "*R["[i-1, i]"]*" – "*X[i]*",  "*
                                   "P = Σ"*P[i])) +
         theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
 
