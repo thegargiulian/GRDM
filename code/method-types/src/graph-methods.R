@@ -41,7 +41,7 @@ graph_method1 <- function() {
                    size = 3) +
         theme_void() +
         labs(caption = "P = X – Y") +
-        theme(plot.caption = element_text(hjust = 0.5, size = 11))
+        theme(plot.caption = element_text(hjust = 0.5, size = 10.5))
 
 }
 
@@ -72,7 +72,7 @@ graph_method2 <- function(r = 0.025) {
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[D]*" – "*T[X]}*",  "*
                                   K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D]}*",  "*
                                   "P = "*K[1]*" – "*K[2])) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 11))
+        theme(plot.caption = element_text(hjust = 0.5, size = 10.5))
 
 }
 
@@ -97,7 +97,7 @@ graph_method3 <- function(r = 0.03) {
         theme_void() +
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[Y]*" – "*T[X]}*",  "*
                                   "P = "*K[1]*" – Y")) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 11))
+        theme(plot.caption = element_text(hjust = 0.5, size = 10.5))
 
 }
 
@@ -129,7 +129,7 @@ graph_method4 <- function(r = 0.03) {
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[D1]*" – "*T[X]}*",  "*
                                   K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D2]}*",  "*
                                   "P = "*K[1]*" – "*K[2])) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 11))
+        theme(plot.caption = element_text(hjust = 0.5, size = 10.5))
 
 }
 
@@ -155,7 +155,7 @@ graph_method5 <- function(r = 0.03) {
         theme_void() +
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[D1]*" – "*T[X]}*",  "*
                                   "P = "*K[1]*" – Y")) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 11))
+        theme(plot.caption = element_text(hjust = 0.5, size = 10.5))
 
 }
 
@@ -179,7 +179,7 @@ graph_method6 <- function(r = 0.03) {
         theme_void() +
         labs(caption = expression(K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D]}*",  "*
                                   "P = X – "*K[2])) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 11))
+        theme(plot.caption = element_text(hjust = 0.5, size = 10.5))
 
 }
 
@@ -231,7 +231,7 @@ graph_method7 <- function(r = 0.03) {
         theme_void() +
         labs(caption = expression(P[i]*" = "*X[i-1]*" × "*R["[i-1, i]"]*" – "*X[i]*",  "*
                                   "P = Σ"*P[i])) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 11))
+        theme(plot.caption = element_text(hjust = 0.5, size = 10.5))
 
 }
 
@@ -250,7 +250,7 @@ combinded_plot <- function() {
 
 ggsave(args$method1,
        plot = graph_method1(),
-       width = 3.25, height = 2.2, units = "in",
+       width = 3.25, height = 2, units = "in",
        dpi = 320)
 
 ggsave(args$method2,
