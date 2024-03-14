@@ -16,7 +16,8 @@ args <- list(method1 = "output/method-1.png",
              method4 = "output/method-4.png",
              method5 = "output/method-5.png",
              method6 = "output/method-6.png",
-             method7 = "output/method-7.png")
+             method7 = "output/method-7.png",
+             methods_all = "output/Figure-1.png")
 
 # ----- functions
 
@@ -40,7 +41,7 @@ graph_method1 <- function() {
                    size = 3) +
         theme_void() +
         labs(caption = "P = X – Y") +
-        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
+        theme(plot.caption = element_text(hjust = 0.5, size = 11))
 
 }
 
@@ -71,7 +72,7 @@ graph_method2 <- function(r = 0.025) {
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[D]*" – "*T[X]}*",  "*
                                   K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D]}*",  "*
                                   "P = "*K[1]*" – "*K[2])) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
+        theme(plot.caption = element_text(hjust = 0.5, size = 11))
 
 }
 
@@ -96,7 +97,7 @@ graph_method3 <- function(r = 0.03) {
         theme_void() +
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[Y]*" – "*T[X]}*",  "*
                                   "P = "*K[1]*" – Y")) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
+        theme(plot.caption = element_text(hjust = 0.5, size = 11))
 
 }
 
@@ -128,7 +129,7 @@ graph_method4 <- function(r = 0.03) {
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[D1]*" – "*T[X]}*",  "*
                                   K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D2]}*",  "*
                                   "P = "*K[1]*" – "*K[2])) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
+        theme(plot.caption = element_text(hjust = 0.5, size = 11))
 
 }
 
@@ -151,10 +152,10 @@ graph_method5 <- function(r = 0.03) {
                    size = 3) +
         geom_point(aes(x = 20, y = 20),
                    size = 3) +
-        theme_void()+
+        theme_void() +
         labs(caption = expression(K[1]*" = X × "*R[F]^{T[D1]*" – "*T[X]}*",  "*
                                   "P = "*K[1]*" – Y")) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
+        theme(plot.caption = element_text(hjust = 0.5, size = 11))
 
 }
 
@@ -178,7 +179,7 @@ graph_method6 <- function(r = 0.03) {
         theme_void() +
         labs(caption = expression(K[2]*" = Y / "*R[B]^{T[Y]*" – "*T[D]}*",  "*
                                   "P = X – "*K[2])) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
+        theme(plot.caption = element_text(hjust = 0.5, size = 11))
 
 }
 
@@ -227,11 +228,21 @@ graph_method7 <- function(r = 0.03) {
                    size = 3) +
         geom_point(aes(x = 21, y = 4),
                    size = 3) +
-        theme_void()+
+        theme_void() +
         labs(caption = expression(P[i]*" = "*X[i-1]*" × "*R["[i-1, i]"]*" – "*X[i]*",  "*
                                   "P = Σ"*P[i])) +
-        theme(plot.caption = element_text(hjust = 0.5, size = 8.5))
+        theme(plot.caption = element_text(hjust = 0.5, size = 11))
 
+}
+
+combinded_plot <- function() {
+  
+    graph_method1() + graph_method2() + graph_method3() +
+        graph_method4() + graph_method5() + graph_method6() + graph_method7() +
+        plot_layout(nrow = 4) + plot_annotation(tag_levels = "1") &
+        theme(plot.tag = element_text(face = "bold"),
+              plot.margin = margin(t = 0.1, unit = "in"))
+  
 }
 
 
@@ -239,37 +250,42 @@ graph_method7 <- function(r = 0.03) {
 
 ggsave(args$method1,
        plot = graph_method1(),
-       width = 2.5, height = 2.5, units = "in",
+       width = 3.25, height = 2.2, units = "in",
        dpi = 320)
 
 ggsave(args$method2,
        plot = graph_method2(),
-       width = 2.5, height = 2.5, units = "in",
+       width = 3.25, height = 2, units = "in",
        dpi = 320)
 
 ggsave(args$method3,
        plot = graph_method3(),
-       width = 2.5, height = 2.5, units = "in",
+       width = 3.25, height = 2, units = "in",
        dpi = 320)
 
 ggsave(args$method4,
        plot = graph_method4(),
-       width = 2.5, height = 2.5, units = "in",
+       width = 3.25, height = 2, units = "in",
        dpi = 320)
 
 ggsave(args$method5,
        plot = graph_method5(),
-       width = 2.5, height = 2.5, units = "in",
+       width = 3.25, height = 2, units = "in",
        dpi = 320)
 
 ggsave(args$method6,
        plot = graph_method6(),
-       width = 2.5, height = 2.5, units = "in",
+       width = 3.25, height = 2, units = "in",
        dpi = 320)
 
 ggsave(args$method7,
        plot = graph_method7(),
-       width = 2.5, height = 2.5, units = "in",
+       width = 3.25, height = 2, units = "in",
+       dpi = 320)
+
+ggsave(args$methods_all,
+       plot = combinded_plot(),
+       width = 6.5, height = 8.4, units = "in",
        dpi = 320)
 
 # done.
