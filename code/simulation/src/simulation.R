@@ -84,8 +84,8 @@ space1 <- bind_rows(space1)
 # state space 2: vary the unobserved growth rates
 space2 <- NULL
 
-min_rel_R <- 0.8
-max_rel_R <- 1.2
+min_rel_R <- 0.75
+max_rel_R <- 1.25
 
 i <- 1
 
@@ -124,8 +124,8 @@ space2 <- bind_rows(space2)
 # state space 3: vary the fertility and migration components
 space3 <- NULL
 
-min_birth_effect <- -10
-max_birth_effect <- 2
+min_birth_effect <- -8
+max_birth_effect <- 1
 min_migration_effect <- -1
 max_migration_effect <- 1
 
