@@ -66,6 +66,7 @@ absolute_comparison <- function() {
                   aes(x = crisis, ymin = lower, ymax = upper,
                       col = source, group = quality, linetype = specificity),
                   position = position_dodge(width = 0.4), width = 0.4) +
+    geom_vline(xintercept = 1:8, col = "gray80", linetype = "dotted") +
     theme_classic() +
     theme(text = element_text(size = 11),
           legend.position = "bottom") +
@@ -138,6 +139,7 @@ relative_comparison <- function() {
                   aes(x = crisis, ymin = lower, ymax = upper,
                       col = source, group = quality, linetype = specificity),
                   position = position_dodge(width = 0.4), width = 0.4) +
+    geom_vline(xintercept = 1:8, col = "gray80", linetype = "dotted") +
     theme_classic() +
     theme(text = element_text(size = 11),
           legend.position = "bottom") +
