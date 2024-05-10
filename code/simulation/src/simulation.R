@@ -249,24 +249,35 @@ low_colour <- met.brewer("Ingres", 4)[1]
 f1 <- space1 %>%
     ggplot(aes(X_completeness, completeness_change, fill = D_C)) +
     geom_tile() +
+    geom_contour(aes(z = D_C),
+                 breaks = D_C_base, col = "white") +
+    geom_segment(aes(x = 0.9, xend = 0.95,
+                     y = -0.005965472, yend = -0.003158882,
+                     col = "20.7")) +
     scale_x_continuous(name = "1911 census completeness",
                        labels = scales::percent) +
     scale_y_continuous(name = "Change in completeness,\n1911-21",
                        labels = function(x) scales::percent(x, accuracy = 1)) +
+    scale_color_manual(name = "Base case death toll (millions)",
+                       values = "red") +
     coord_cartesian(expand = FALSE) +
-    scale_fill_gradient2(name = "Death toll estimate (millions)",
+    scale_fill_gradient2(name = "Range of death toll estimates (millions)",
                          limits = c(low_value, high_value),
                          midpoint = mid_value,
                          low = low_colour,
                          high = high_colour) +
     theme_classic() +
     theme(legend.position = "bottom",
+          legend.box = "vertical",
           text = element_text(size = 11)) +
+    guides(colour = guide_legend(order = 1)) +
     facet_wrap(~set)
 
 f2 <- space2 %>%
     ggplot(aes(R_F_unobserved - 1, R_B_unobserved - 1, fill = D_C)) +
     geom_tile() +
+    geom_contour(aes(z = D_C),
+                 breaks = D_C_base, col = "red") +
     scale_x_continuous(name = "Unobserved R, 1911-18",
                        labels = scales::percent) +
     scale_y_continuous(name = "Unobserved R, 1918-21",
@@ -284,6 +295,8 @@ f2 <- space2 %>%
 f3 <- space3 %>%
     ggplot(aes(true_birth_effect, true_migration_effect, fill = D_C)) +
     geom_tile() +
+    geom_contour(aes(z = D_C),
+                 breaks = D_C_base, col = "red") +
     scale_x_continuous(name = "Net effect on births (millions)") +
     scale_y_continuous(name = "Net effect on\nmigration (millions)") +
     coord_cartesian(expand = FALSE) +
@@ -305,11 +318,13 @@ space4_density <- data.frame(x = space4_density$x,
 f4 <- space4_density %>%
     ggplot(aes(x, y)) +
     geom_segment(aes(xend = x, yend = 0, col = x)) +
+    geom_vline(xintercept = D_C_base, col = "red") +
     theme_classic() +
     theme(legend.position = "none",
           text = element_text(size = 11)) +
     scale_x_continuous(name = "Death toll estimate (millions)") +
-    scale_y_continuous(name = "Density") +
+    scale_y_continuous(name = "Density",
+                       expand = c(0, 0)) +
     scale_color_gradient2(limits = c(low_value, high_value),
                         midpoint = mid_value,
                         low = low_colour,
@@ -328,7 +343,7 @@ full_figure <- plot_grid(plot_grid(NULL, diagram, NULL,
                                    align = "hv",
                                    axis = "tblr"),
                          f_legend,
-                         ncol = 1, nrow = 3, rel_heights = c(0.3, 0.6, 0.05))
+                         ncol = 1, nrow = 3, rel_heights = c(0.3, 0.6, 0.2))
 
 ggsave(args$output, full_figure,
        width = 6.5, height = 8, dpi = 320)
