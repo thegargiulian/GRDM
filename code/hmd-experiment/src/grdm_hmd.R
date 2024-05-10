@@ -10,7 +10,7 @@ pops <- getHMDcountries() %>%
 
 #exclude populations with major definition changes
 pops <- pops %>%
-  filter(!CNTRY %in% c("BEL", "DNK", "FRATNP", "ITA", "NZL_MA"))
+  filter(!CNTRY %in% c("BEL", "DNK", "FRATNP", "ITA", "NZL_MA", "GBR_SCO"))
 
 #exclude all versions of Germany, all-UK, England and Wales civilian, non-Maori NZ
 pops <- pops %>%
