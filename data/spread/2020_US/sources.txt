@@ -1,0 +1,7 @@
+"COVIDUCDMonthlyData.feather": https://osf.io/fvwqm
+
+"nhgis0012_ds146_2000_county.csv": Accessed from IPUMS NHGIS, using the "Total Population" variable from the "2000_SF1a" dataset
+
+"nhgis0012_ds172_2010_county.csv": Accessed from IPUMS NHGIS, using the "Total Population" variable from the "2010_SF1a" dataset
+
+"co-est2022-alldata.csv": https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-total.html

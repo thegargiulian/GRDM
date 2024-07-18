@@ -1,0 +1,3 @@
+"us_excess.csv": Transcribed from the "Excess Pneumonia and Influenza Mortality" column in Table 1 in https://doi.org/10.1001/jama.298.6.644
+
+"us_denominators.csv": Transcribed from https://www.census.gov/library/working-papers/1998/demo/POP-twps0027.html

@@ -1,5 +1,8 @@
 .DS_Store
-data/
 *.csv
+*.xls
 *.xlsx
 *.touch
+*.feather
+!data/gold-standard-comparison/comparisons.csv
+!data/gold-standard-comparison/denominators.csv

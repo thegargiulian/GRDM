@@ -1,0 +1,3 @@
+"japan_excess.csv": Transcribed from "Total" column on page 121 of Hayami (2015), available from: https://nichibun.repo.nii.ac.jp/records/6056
+
+"japan_denominators.csv": From Table 2-12 ("Population by Sex and Prefectures (1884～1985)") in the Historical Statistics of Japan book series, available from the Japan Knowledge Lib database (https://japanknowledge.com/library/en/)
