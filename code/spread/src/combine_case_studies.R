@@ -5,6 +5,7 @@ source("code/spread/src/1918_England+Wales.R")
 source("code/spread/src/1918_Japan.R")
 source("code/spread/src/1918_Spain.R")
 source("code/spread/src/1918_US.R")
+source("code/spread/src/1944_Netherlands.R")
 source("code/spread/src/1980_ElSalvador.R")
 source("code/spread/src/2020_Brazil.R")
 source("code/spread/src/2020_US.R")
@@ -24,6 +25,7 @@ figure <- ggarrange(plot_1624,
                     plot_1918_2,
                     plot_1918_3,
                     plot_1918_4,
+                    plot_1944,
                     plot_1980,
                     plot_2020_1,
                     plot_2020_2)
