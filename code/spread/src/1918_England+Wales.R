@@ -108,7 +108,8 @@ plot_1918_1 <- data %>%
                      labels = scales::percent) +
   scale_y_continuous(name = NULL,
                      labels = scales::percent,
-                     limits = c(0, NA)) +
+                     limits = c(0, NA),
+                     breaks = c(0, 0.005, 0.01),) +
   ggtitle("1918-19, Eng. & W.") +
   labs(caption = bquote(n*' = '*.(n)*', '*R^2*' = '*.(r2))) +
   theme_classic() +

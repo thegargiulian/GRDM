@@ -1,0 +1,5 @@
+"01_tote_ww2.dta": This file was obtained from Christopher Eder (ederchris@gmail.com), formerly based at Johannes Kepler University Linz, on 22 July 2024
+
+"gem_hist_einwohner.dta": This file was obtained from Christopher Eder (ederchris@gmail.com), formerly based at Johannes Kepler University Linz, on 22 July 2024
+
+"01_gem_timeline_1939-2011.dta": This file was obtained from Christopher Eder (ederchris@gmail.com), formerly based at Johannes Kepler University Linz, on 22 July 2024

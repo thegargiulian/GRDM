@@ -95,7 +95,9 @@ plot_2020_2 <- data %>%
   scale_x_continuous(name = NULL,
                      labels = scales::percent) +
   scale_y_continuous(name = NULL,
-                     labels = scales::percent) +
+                     labels = scales::percent,
+                     breaks = c(0, 0.005, 0.01),
+                     limits = c(0, 0.01)) +
   ggtitle("2020-22, USA") +
   labs(caption = bquote(n*' = '*.(n)*', '*R^2*' = '*.(r2))) +
   theme_classic() +

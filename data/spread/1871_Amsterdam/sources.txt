@@ -1,0 +1,3 @@
+"Smallpox_1871_Amsterdam_neighborhood.xlsx": This file was obtained from Tim Riswick (tim.riswick@ru.nl) at Radboud University on 22 July 2024
+
+"population_by_neighborhood.xlsx": This file was obtained from Tim Riswick (tim.riswick@ru.nl) at Radboud University on 22 July 2024

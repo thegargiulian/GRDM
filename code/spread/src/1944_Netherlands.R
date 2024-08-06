@@ -43,7 +43,8 @@ plot_1944 <- data %>%
                      labels = scales::percent) +
   scale_y_continuous(name = NULL,
                      labels = scales::percent,
-                     limits = c(0, NA)) +
+                     limits = c(0, NA),
+                     breaks = c(0, 0.05, 0.1)) +
   ggtitle("1944-45, Netherl.") +
   labs(caption = bquote(n*' = '*.(n)*', '*R^2*' = '*.(r2))) +
   theme_classic() +

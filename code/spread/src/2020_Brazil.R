@@ -47,7 +47,8 @@ plot_2020_1 <- data %>%
   scale_x_continuous(name = NULL,
                      labels = scales::percent) +
   scale_y_continuous(name = NULL,
-                     labels = scales::percent) +
+                     labels = scales::percent,
+                     breaks = c(0.002, 0.003, 0.004),) +
   ggtitle("2020-21, Brazil") +
   labs(caption = bquote(n*' = '*.(n)*', '*R^2*' = '*.(r2))) +
   theme_classic() +
