@@ -1,0 +1,3 @@
+"brazil_excess.csv": Excess deaths for 2020 and 2021 transcribed from the "Excess" column in Table S2 in https://doi.org/10.1371/journal.pone.0272752
+
+"brazil_denominators.csv": Census populations (from 2000, 2010, and 2022 for the GRDM exercise) and a intercensal population estimate (from 2019 as a denominator for the excess mortality estimates) taken from https://censo2022.ibge.gov.br/panorama/ and https://agenciadenoticias.ibge.gov.br/agencia-detalhe-de-midia.html?view=mediaibge&catid=2103&id=3097

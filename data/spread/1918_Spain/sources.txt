@@ -1,0 +1,3 @@
+"spain_excess.csv": Transcribed from the "All-cause mortality: Cumulative excess mortality 1918-1919" column of Table 2 in https://doi.org/10.1186/1471-2334-14-371
+
+"spain_denominators.csv": Transcribed from de facto populations in the official 1900-40 census reports (see https://www.ine.es/inebaseweb/71807.do); the consolidated source for all four census years is INE's "Población según sexo y edad desde 1900 hasta 2001" (https://www.ine.es/jaxi/Tabla.htm?path=/t20/e245/p06/l0/&file=1900.px&L=0)

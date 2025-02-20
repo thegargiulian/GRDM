@@ -1,0 +1,3 @@
+"elsalvador_MSE.csv": Transcribed from the "Population" and "MSE estimate" columns in Table 3 in https://doi.org/10.4054/DemRes.2019.41.27
+
+"elsalvador_denominators.csv": Transcribed from the 1961, 1971, and 1992 official census reports available from: https://ccp.ucr.ac.cr/bvp/documentos.htm
